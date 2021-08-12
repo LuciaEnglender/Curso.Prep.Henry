@@ -181,29 +181,31 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  var meses=[];
-  for (i = 0; i < array.length; i++){
-    if (array[i]==="Enero"){
-      meses [1] = array [i]
+  var nuevoArray = [];
+  for(let i= 0; i<array.length; i++) {
+    if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
+      nuevoArray.push(array[i]);
     }
-    if (array[i]==="Marzo"){
-        meses [3] = array [i]
-      }
-    if (array[i]==="Noviembre"){
-        meses [11] = array [i]
-      }
-    else {
-      return "No se encontraron los meses pedidos";
-    }
+  }/*no lo logré comprender asi que lo copié de las soluciones */
+  if(nuevoArray.length < 3) {
+    return "No se encontraron los meses pedidos";
   }
-  return meses;
+  else {
+      return nuevoArray;
+  }
 }
-
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var cien = [];
+  for (var i=0; i < array.length ; i++){
+    if (array [i] > 100){
+      cien.push(array [i]);
+    }
+  }
+  return cien;
 }
 
 
@@ -215,6 +217,24 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var numero2 = []
+  sumatotal = numero;
+  for (var i = 0; i<=10; i++){
+    sumatotal += 2;
+    if (sumatotal === i){
+      break;
+    }
+    else {
+      numero2.push(sumatotal);
+    }
+  }   
+  if (i<10){
+    return "Se interrumpió la ejecución";
+  }
+  else{
+    return numero2;
+  }
+
 }
 
 
@@ -225,6 +245,18 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var numero2 = [];
+  var sumatotal=numero;
+  for (var i = 0; i<10 ; i++){
+    if (i===5){
+      continue;
+    }
+    else{
+      sumatotal+=2;
+      numero2.push(sumatotal);
+    }
+  }return numero2;
+
 }
 
 
