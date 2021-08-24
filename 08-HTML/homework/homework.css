@@ -1,0 +1,24 @@
+
+h1 {
+    color:coral;
+}
+img {
+    width: 400px;
+}
+#thirdDiv {
+    height: 600px;
+    width: 500px;
+    background-color: cadetblue;
+    padding: 50px;
+    border: chocolate thin;
+    
+}
+#spanId{
+    margin: 50px;
+    font-size: 18px;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+}
